@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-o4s7r&3_4b3&i9gwipvc+p&!80dm%wz3@y_v1a)&pw-=09m!is
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ['https://task_management.onrender.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://task-manager-ukhy.onrender.com','https://*.127.0.0.1']
 
 
 # Application definition
@@ -64,7 +64,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'task_management.urls'
 CORS_ORIGIN_ALLOW_ALL = True
-CSRF_TRUSTED_ORIGINS = ['https://task_management.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://task-manager-ukhy.onrender.com']
 
 
 TEMPLATES = [
