@@ -33,7 +33,7 @@ class UserRegistrationApiView(APIView):
             print("token ", token)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             print("uid ", uid)
-            confirm_link = f"http://127.0.0.1:8000/accounts/active/{uid}/{token}"
+            confirm_link = f"http://127.0.0.1:8000/account/active/{uid}/{token}"
             email_subject = "Confirm Your Email"
             email_body = render_to_string('confirm_email.html', {'confirm_link' : confirm_link})
             
@@ -78,8 +78,9 @@ class UserLoginApiView(APIView):
                 return Response({'error' : "Invalid Credential"})
         return Response(serializer.errors)
 
-from rest_framework.authtoken.models import Token
 
+
+from rest_framework.authtoken.models import Token
 
 class UserLogoutView(APIView):
     def get(self, request):
